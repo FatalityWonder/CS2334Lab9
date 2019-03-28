@@ -68,8 +68,13 @@
      * @return The value of the nth fibonacci number.
      */
     public int fibonacci(int n)
-    {
-        return 0;
+    {   
+        if (n <= 1)
+        {
+            return 1;
+        }
+
+        return fibbonacci(n - 1) + fibbonacci(n - 2);
     }
 
     

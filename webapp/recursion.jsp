@@ -33,7 +33,10 @@
          * Here is the base case (ending condition): value == 1.
          * This lets our recursion know when to stop.
          */
-        //TODO
+        if (value <= 1)
+        {
+            return 1;
+        }
 
 
         /*
@@ -44,7 +47,7 @@
          * 
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
-        return 0;
+        return value * factorial(value - 1);
 
     }
 

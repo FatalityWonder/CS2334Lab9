@@ -74,7 +74,7 @@
             return 1;
         }
 
-        return fibbonacci(n - 1) + fibbonacci(n - 2);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
     

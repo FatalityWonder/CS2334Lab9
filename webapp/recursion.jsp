@@ -107,23 +107,23 @@
     
         public Tree(int value)
         {
-    	    children = new ArrayList<Tree>();
+    	    this.children = new ArrayList<Tree>();
             this.value = value;
         }
     
         public int getValue()
         {
-    	    return value;
+    	    return this.value;
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    return children;
+    	    return this.children;
         }
     
         public void add(Tree child)
         {
-    	    children.add(child);
+    	    this.children.add(child);
         }
     }
     
@@ -160,7 +160,7 @@
     	    return 1;
         }
         
-    	return branchingFactor * nnaryTreeSize(branchingFactor, height - 1) - nnaryTreeSize(branchingFactor, height - 2) + nnaryTreeSize(branchingFactor, height -1);
+    	return branchingFactor * nnaryTreeSize(branchingFactor, height - 1) - nnaryTreeSize(branchingFactor, height - 2) + nnaryTreeSize(branchingFactor, height - 1);
     }
 
     /** **********************************************************************

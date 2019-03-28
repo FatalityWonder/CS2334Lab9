@@ -107,22 +107,23 @@
     
         public Tree(int value)
         {
-    	    //TODO
+    	    children = new ArrayList<Tree>();
+            this.value = value;
         }
     
         public int getValue()
         {
-    	    return 0; //TODO
+    	    return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    return null; //TODO
+    	    return children;
         }
     
         public void add(Tree child)
         {
-    	    return; //TODO
+    	    children.add(child);
         }
     }
     
@@ -156,10 +157,10 @@
     {
         if (height == 1) 
         {
-    	    //TODO
+    	    return 1;
         }
         
-    	return 0;
+    	return branchingFactor * nnaryTreeSize(branchingFactor, height - 1) - nnaryTreeSize(branchingFactor, height - 2) + nnaryTreeSize(branchingFactor, height -1);
     }
 
     /** **********************************************************************

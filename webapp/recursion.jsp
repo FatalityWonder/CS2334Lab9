@@ -159,6 +159,10 @@
         {
     	    return 1;
         }
+        if (height <= 0)
+        {
+            return 0;
+        }
         
     	return branchingFactor * nnaryTreeSize(branchingFactor, height - 1) - nnaryTreeSize(branchingFactor, height - 2) + nnaryTreeSize(branchingFactor, height - 1);
     }

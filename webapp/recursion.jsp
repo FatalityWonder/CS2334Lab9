@@ -173,7 +173,19 @@
      */
     public int treeSum(Tree tree)
     {
-    	return 0; //TODO
+        int value = tree.getValue();
+
+        if(tree.getChildren().size() == 0)
+        {
+            return value;
+        }
+
+        for(Tree child : tree.getChildren())
+        {
+            value += treeSum(child);
+        }
+
+    	return value;
     }
     
     /** **********************************************************************
